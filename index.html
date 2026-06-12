@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tanja Koller — Energetska zdravilka & bioenergetičarka | Tieschen</title>
+<meta name="description" content="Certificirana energetska zdravilka Tanja Koller. Odkrijte vzrok svojih težav — harmonija za dušo, telo in duha. Metoda Horsta Krohneja, viva meter. Pichla 51, 8355 Tieschen, Avstrija.">
+<meta property="og:title" content="Tanja Koller — Energetska zdravilka">
+<meta property="og:description" content="Harmonija za dušo, telo in duha. Odkrijte vzrok svojih težav in aktivirajte samozdravilne moči.">
+<meta property="og:image" content="assets/img/portrait.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.png" type="image/png">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+<script>
+/* skip preloader on repeat visits / static mode — must run before first paint */
+if (sessionStorage.getItem('tk-seen') || location.search.includes('static')
+    || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  document.documentElement.classList.add('tk-seen');
+}
+</script>
+</head>
+<body>
+
+<!-- ======================= PRELOADER ======================= -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <div class="loader__fol" id="loaderFol"></div>
+    <p class="loader__name">Tanja Koller</p>
+    <p class="loader__tag" data-i18n="loader.tag">harmonija za dušo, telo in duha</p>
+  </div>
+</div>
+
+<!-- ======================= NAV ======================= -->
+<header class="nav" id="nav">
+  <a class="nav__brand" href="#vrh" aria-label="Tanja Koller — domov">
+    <svg class="nav__mark" viewBox="0 0 48 48" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-width="1.1">
+        <circle cx="24" cy="24" r="7"/>
+        <circle cx="24" cy="17" r="7"/>
+        <circle cx="24" cy="31" r="7"/>
+        <circle cx="17.94" cy="20.5" r="7"/>
+        <circle cx="30.06" cy="20.5" r="7"/>
+        <circle cx="17.94" cy="27.5" r="7"/>
+        <circle cx="30.06" cy="27.5" r="7"/>
+        <circle cx="24" cy="24" r="14.2"/>
+      </g>
+    </svg>
+    <span class="nav__name">Tanja <em>Koller</em></span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Glavna navigacija">
+    <a href="#ponudba" data-i18n="nav.ponudba">Ponudba</a>
+    <a href="#energija" data-i18n="nav.energija">Energija</a>
+    <a href="#cakre" data-i18n="nav.cakre">Čakre</a>
+    <a href="#o-meni" data-i18n="nav.omeni">O meni</a>
+    <a href="#mnenja" data-i18n="nav.mnenja">Mnenja</a>
+    <a href="#galerija" data-i18n="nav.galerija">Galerija</a>
+    <a href="#faq">FAQ</a>
+    <a href="#rezervacija" class="nav__cta" data-i18n="nav.cta">Rezervacija</a>
+  </nav>
+  <div class="nav__right">
+    <div class="nav__lang" role="group" aria-label="Jezik / Sprache">
+      <button type="button" data-setlang="sl" aria-label="Slovenščina">SL</button>
+      <span aria-hidden="true">/</span>
+      <button type="button" data-setlang="de" aria-label="Deutsch">DE</button>
+    </div>
+    <button class="nav__burger" id="navBurger" aria-label="Odpri meni" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <span class="nav__progress" id="navProgress" aria-hidden="true"></span>
+</header>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" id="vrh">
+  <canvas id="aurora" class="hero__canvas" aria-hidden="true"></canvas>
+  <div class="hero__fol" id="flowerOfLife" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__eyebrow reveal" data-i18n="hero.eyebrow">Energetsko zdravljenje · Bioenergetika</p>
+    <h1 class="hero__title">
+      <span class="splitline" data-i18n-split="hero.l1">Harmonija za dušo,</span>
+      <span class="splitline" data-i18n-split="hero.l2">telo <em>in</em> duha.</span>
+    </h1>
+    <p class="hero__sub reveal d3" data-i18n-html="hero.sub">Vsaka bolezen ima vzrok. Ko ga odkrijemo in ozavestimo,<br class="br-desk">
+    se v telesu prebudijo samozdravilne moči.</p>
+    <div class="hero__actions reveal d4">
+      <a href="#rezervacija" class="btn btn--gold" data-i18n="hero.cta1">Rezervirajte termin</a>
+      <a href="#energija" class="btn btn--ghost" data-i18n="hero.cta2">Spoznajte metodo</a>
+    </div>
+  </div>
+  <ul class="hero__stats reveal d5">
+    <li><strong data-count="7">7</strong><span data-i18n="hero.s1">glavnih čaker</span></li>
+    <li><strong data-count="60">60</strong><span data-i18n="hero.s2">minut terapije</span></li>
+    <li><strong data-count="1000">1000</strong><span data-i18n="hero.s3">frekvenc na čakro</span></li>
+    <li><strong data-count="4">4</strong><span data-i18n="hero.s4">terapije običajno zadoščajo</span></li>
+  </ul>
+  <a href="#ponudba" class="hero__scroll" aria-label="Pomakni se navzdol"><span></span></a>
+</section>
+
+<!-- ======================= SERVICES ======================= -->
+<section class="section section--light services" id="ponudba">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="srv.kicker">Ponudba</p>
+    <h2 data-i18n-split="srv.h2">Nudim vam pomoč pri</h2>
+    <div class="services__grid">
+      <article class="card reveal" style="--accent:#e25c5c">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 4v24M10 9c0-2 2.7-3.5 6-3.5s6 1.5 6 3.5M9 16h14M11 23c0 2 2.2 3.4 5 3.4s5-1.4 5-3.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3 data-i18n="srv.1t">Bolečine</h3>
+        <p data-i18n="srv.1p">Težave s hrbtenico in organi, glavoboli, migrene, bolečine v sklepih ter kronična bolečinska stanja.</p>
+      </article>
+      <article class="card reveal" style="--accent:#ec8f4e">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M16 27C9 22 5 17.5 5 12.5 5 9 7.6 6.5 11 6.5c2 0 3.8 1 5 2.6 1.2-1.6 3-2.6 5-2.6 3.4 0 6 2.5 6 6 0 5-4 9.5-11 14.5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M10 15h3l2-3 2 6 2-3h3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-i18n="srv.2t">Alergije</h3>
+        <p data-i18n="srv.2p">Odprava in brisanje alergij, povezanih s prehrano, pršicami, težkimi kovinami, cvetnim prahom, travami in soljudmi.</p>
+      </article>
+      <article class="card reveal" style="--accent:#e8c34e">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M11 26v-3.2A9 9 0 1 1 25 15c0 1.8-.6 3-1.5 4.4L25 23h-3v3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="14" r="2.4" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M16 11.6V9M16 16.4V19M13.6 14H11M18.4 14H21" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </div>
+        <h3 data-i18n="srv.3t">Psihološke težave</h3>
+        <p data-i18n="srv.3p">Izgorelost, stres, motnje razpoloženja in učenja, osebnostne in psihosomatske motnje ter težave v odnosih.</p>
+      </article>
+      <article class="card reveal" style="--accent:#5fbf8a">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M12 5h8M14 5v6L7.5 22a4 4 0 0 0 3.5 6h10a4 4 0 0 0 3.5-6L18 11V5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="22" r="1.3" fill="currentColor"/><circle cx="18.5" cy="24.5" r="1" fill="currentColor"/></svg>
+        </div>
+        <h3 data-i18n="srv.4t">Razstrupljanje</h3>
+        <p data-i18n="srv.4p">Razstrupljanje in odvajanje težkih kovin, ki se nakopičijo od cepiv, amalgamskih zalivk in zobnih aparatov.</p>
+      </article>
+      <article class="card reveal" style="--accent:#5aa7d6">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><path d="M5 24h22M8 24v-7h16v7M12 17v-4h8v4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 9c1.5-1.5 3.5-1.5 5 0s3.5 1.5 5 0 3.5-1.5 5 0" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </div>
+        <h3 data-i18n="srv.5t">Testiranje prostorov</h3>
+        <p data-i18n="srv.5p">Testiranje spalnih prostorov in ležišč, kjer se lahko nahajajo vodni tokovi, zemeljska sevanja ali elektrosmog.</p>
+      </article>
+      <article class="card reveal" style="--accent:#9a6fd0">
+        <div class="card__icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".7"/><circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="1" opacity=".4"/><circle cx="16" cy="8.5" r="1.2" fill="currentColor"/><circle cx="23.5" cy="16" r="1.2" fill="currentColor"/><circle cx="16" cy="23.5" r="1.2" fill="currentColor"/><circle cx="8.5" cy="16" r="1.2" fill="currentColor"/></svg>
+        </div>
+        <h3 data-i18n="srv.6t">Harmoniziranje</h3>
+        <p data-i18n="srv.6p">Uravnovešanje čaker, meridianov in življenjskega koledarja — za pomoč pri samozdravljenju.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= MARQUEE ======================= -->
+<div class="marquee marquee--light" aria-hidden="true">
+  <div class="marquee__track">
+    <span data-i18n-html="marquee.a">Harmonija&ensp;·&ensp;Energija&ensp;·&ensp;Ravnovesje&ensp;·&ensp;<em>Samozdravljenje</em>&ensp;·&ensp;</span>
+    <span data-i18n-html="marquee.a">Harmonija&ensp;·&ensp;Energija&ensp;·&ensp;Ravnovesje&ensp;·&ensp;<em>Samozdravljenje</em>&ensp;·&ensp;</span>
+    <span data-i18n-html="marquee.a">Harmonija&ensp;·&ensp;Energija&ensp;·&ensp;Ravnovesje&ensp;·&ensp;<em>Samozdravljenje</em>&ensp;·&ensp;</span>
+  </div>
+</div>
+
+<!-- ======================= SYMPTOM FINDER ======================= -->
+<section class="section section--cream finder" id="svetovalec">
+  <div class="wrap wrap--narrow">
+    <p class="kicker reveal" data-i18n="fin.kicker">Interaktivni svetovalec</p>
+    <h2 data-i18n-split="fin.h2">Kaj vas teži?</h2>
+    <p class="lead reveal" data-i18n="fin.lead">Izberite, kar opažate pri sebi, in pokazala vam bom, na katerem področju vam lahko pomagam.</p>
+    <div class="finder__chips reveal" id="finderChips" role="group" aria-label="Izberite simptome"></div>
+    <div class="finder__result" id="finderResult" hidden>
+      <div class="finder__resultCard" id="finderCard"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ENERGY / DUHOVNO ======================= -->
+<section class="section section--dark energy" id="energija">
+  <div class="wrap">
+    <p class="kicker kicker--gold reveal" data-i18n="en.kicker">Duhovno zdravljenje</p>
+    <h2 data-i18n-split="en.h2">Od kod prihaja vaša energija?</h2>
+    <p class="lead lead--dark reveal" data-i18n-html="en.lead">V eni uri porabimo približno <strong>1000 vatov</strong> energije za razmišljanje, gibanje in vsakodnevne dejavnosti. Znanstvene raziskave kažejo, da jo črpamo iz treh enakovrednih virov.</p>
+
+    <div class="energy__split">
+      <div class="energy__ringWrap reveal">
+        <svg class="energy__ring" id="energyRing" viewBox="0 0 240 240" role="img" aria-label="Trije viri energije, vsak po tretjino">
+          <circle class="ring__track" cx="120" cy="120" r="92"/>
+          <circle class="ring__seg" id="seg1" cx="120" cy="120" r="92" data-col="#e8c34e"/>
+          <circle class="ring__seg" id="seg2" cx="120" cy="120" r="92" data-col="#5fbf8a"/>
+          <circle class="ring__seg" id="seg3" cx="120" cy="120" r="92" data-col="#9a6fd0"/>
+          <text x="120" y="112" class="ring__big">3×</text>
+          <text x="120" y="138" class="ring__small" data-i18n="en.ring2">tretjine energije</text>
+        </svg>
+      </div>
+      <ul class="energy__legend">
+        <li class="reveal" data-seg="seg1"><i style="--c:#e8c34e"></i><div><strong data-i18n="en.l1t">Zaužita hrana</strong><span data-i18n="en.l1p">Tretjino energije pridobimo s prehrano.</span></div><em>33%</em></li>
+        <li class="reveal" data-seg="seg2"><i style="--c:#5fbf8a"></i><div><strong data-i18n="en.l2t">Zemeljsko magnetno polje</strong><span data-i18n="en.l2p">Tretjino nam daje magnetno polje Zemlje.</span></div><em>33%</em></li>
+        <li class="reveal" data-seg="seg3"><i style="--c:#9a6fd0"></i><div><strong data-i18n="en.l3t">Sistem sedmih čaker</strong><span data-i18n="en.l3p">Tretjina priteka skozi čakre — v vsaki nastaja po 1000 elektromagnetnih frekvenc, ki jih z viva metrom natančno izmerimo.</span></div><em>33%</em></li>
+      </ul>
+    </div>
+
+    <h3 class="energy__subhead reveal" data-i18n="en.sub">Obstajamo na treh ravneh</h3>
+    <div class="levels">
+      <article class="level reveal">
+        <span class="level__num">01</span>
+        <h4 data-i18n="en.lv1t">Telesna raven</h4>
+        <p data-i18n="en.lv1p">Živčni sistem se razveja po telesu ter oskrbuje vse organe in funkcije telesa.</p>
+      </article>
+      <article class="level reveal d1">
+        <span class="level__num">02</span>
+        <h4 data-i18n="en.lv2t">Duševna raven</h4>
+        <p data-i18n="en.lv2p">Meridiani tečejo v obtoku — njihova krajišča so v prstih rok in nog. Vsak meridian oskrbuje določen organski sistem.</p>
+      </article>
+      <article class="level reveal d2">
+        <span class="level__num">03</span>
+        <h4 data-i18n="en.lv3t">Duhovna raven</h4>
+        <p data-i18n="en.lv3p">Čakre vodijo in usmerjajo endokrine žleze ter vse poteke v telesu. Z izravnavo čaker in meridianov se uravnajo šibke točke — in to se pozna na telesni ravni.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= CHAKRA JOURNEY (GSAP pin) ======================= -->
+<section class="section--deep chakras" id="cakre">
+  <div class="chakras__sticky" id="chakraSticky">
+    <div class="wrap">
+      <p class="kicker kicker--gold reveal" data-i18n="ch.kicker">Interaktivno popotovanje</p>
+      <h2 data-i18n-split="ch.h2">Vzpon skozi sedem čaker</h2>
+      <p class="lead lead--dark reveal" data-i18n="ch.lead">Pomikajte se naprej — energija se dviga od korenske čakre do krone, tako kot pri harmonizaciji. Dotaknite se čakre za več.</p>
+      <div class="chakras__split">
+        <div class="chakras__figure reveal" id="chakraFigure">
+          <svg viewBox="0 0 200 460" aria-hidden="true">
+            <path class="silhouette" d="M100 18c14 0 24 11 24 26 0 9-3 17-8 22 2 7 8 11 19 14 14 4 22 10 24 22l6 64c1 9-9 12-13 4l-12-44c-2 8-2 16 0 27l4 26c1 7 2 13 2 20l-2 92c2 26 6 52 11 78 2 9 2 16 1 22-2 9-15 9-17 0l-15-86c-2-12-4-24-4-36v-22c0-5-3-9-8-9h-24c-5 0-8 4-8 9v22c0 12-2 24-4 36l-15 86c-2 9-15 9-17 0-1-6-1-13 1-22 5-26 9-52 11-78l-2-92c0-7 1-13 2-20l4-26c2-11 2-19 0-27l-12 44c-4 8-14 5-13-4l6-64c2-12 10-18 24-22 11-3 17-7 19-14-5-5-8-13-8-22 0-15 10-26 24-26Z" transform="translate(-12 0)"/>
+          </svg>
+          <div class="chakras__nodes" id="chakraNodes"></div>
+        </div>
+        <div class="chakras__panel reveal" id="chakraPanel" aria-live="polite"></div>
+      </div>
+      <div class="chakras__rail" id="chakraRail" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= ABOUT ======================= -->
+<section class="section section--light about" id="o-meni">
+  <div class="wrap about__split">
+    <figure class="about__photo">
+      <div class="imgReveal">
+        <img src="assets/img/portrait.jpg" alt="Tanja Koller, energetska zdravilka" loading="lazy">
+      </div>
+      <figcaption data-i18n="ab.cap">Tanja Koller · certificirana energetska zdravilka</figcaption>
+    </figure>
+    <div class="about__text">
+      <p class="kicker reveal" data-i18n="ab.kicker">O meni</p>
+      <h2 data-i18n-split="ab.h2">Kako odpraviti težave?</h2>
+      <p class="reveal" data-i18n-html="ab.p1">Sem <strong>Tanja Koller</strong> in se ukvarjam z bioenergijo. Delujem na podlagi dolgoletnih lastnih izkušenj in uspešne metode <a href="https://horstkrohne.de/" target="_blank" rel="noopener">Horsta Krohneja</a> — svetovno priznanega nemškega zdravilca, ki je skoraj 20 let skupaj z zdravniki, psihologi in energetiki z vsega sveta raziskoval, kako potekajo energije in kako lahko vplivamo nanje.</p>
+      <p class="reveal" data-i18n-html="ab.p2">Moja naloga in sposobnost je <strong>poiskati vzrok bolezni</strong>. Vsaka bolezen ima vzrok — in ko je ta ozaveščen ali izbrisan, se sproži samozdravljenje. Vzrok iščem v sistemu čaker, meridianov in v <strong>življenjskem koledarju</strong>, kamor so vtisnjene vse travme, konflikti in šok dogodki. V njem lahko do leta natančno ugotovimo, v katerem obdobju se skriva izvor težave.</p>
+      <p class="reveal" data-i18n-html="ab.p3">Pri delu uporabljam <strong>viva meter</strong>, s katerim vstopam v očem nevidna energetska polja in dobim jasne rezultate. Posebnost mojega dela je posredovanje impulza, ki aktivira vaše samozdravilne moči. Več o meni si lahko preberete v <a href="http://revijazarja.si/clanek/alter/5624da55ed46d/kar-danes-mislis-jutri-zivis" target="_blank" rel="noopener">Reviji Zarja</a>.</p>
+      <img class="about__signature reveal" src="assets/img/signature.png" alt="Podpis Tanje Koller" loading="lazy">
+    </div>
+  </div>
+
+  <div class="wrap steps reveal">
+    <h3 class="steps__head" data-i18n="st.h">Kako poteka terapija</h3>
+    <ol class="steps__list">
+      <li><span>1</span><h4 data-i18n="st.1t">Pogovor</h4><p data-i18n="st.1p">Spoznava se in opišete, kaj vas teži.</p></li>
+      <li><span>2</span><h4 data-i18n="st.2t">Meritev</h4><p data-i18n="st.2p">Z viva metrom izmerim stanje čaker in meridianov.</p></li>
+      <li><span>3</span><h4 data-i18n="st.3t">Iskanje vzroka</h4><p data-i18n="st.3p">V življenjskem koledarju poiščem izvor težave — do leta natančno.</p></li>
+      <li><span>4</span><h4 data-i18n="st.4t">Harmonizacija</h4><p data-i18n="st.4p">Vzrok izbrišemo, impulz aktivira vaše samozdravilne moči.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================= TESTIMONIALS ======================= -->
+<section class="section section--cream voices" id="mnenja">
+  <div class="wrap wrap--narrow">
+    <p class="kicker reveal" data-i18n="vo.kicker">Izkušnje strank</p>
+    <h2 data-i18n-split="vo.h2">Zgodbe, ki jih piše energija</h2>
+    <div class="voices__slider reveal" id="slider">
+      <div class="voices__track" id="sliderTrack"></div>
+      <div class="voices__nav">
+        <button id="slidePrev" aria-label="Prejšnje mnenje">←</button>
+        <div class="voices__dots" id="sliderDots"></div>
+        <button id="slideNext" aria-label="Naslednje mnenje">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= GALLERY ======================= -->
+<section class="section section--light gallery" id="galerija">
+  <div class="wrap">
+    <p class="kicker reveal" data-i18n="ga.kicker">Galerija</p>
+    <h2 data-i18n-split="ga.h2">Vpogled v mojo prakso</h2>
+    <div class="gallery__grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ======================= FAQ ======================= -->
+<section class="section section--cream faq" id="faq">
+  <div class="wrap wrap--narrow">
+    <p class="kicker reveal" data-i18n="fq.kicker">Pogosta vprašanja</p>
+    <h2 data-i18n-split="fq.h2">Kar vas najpogosteje zanima</h2>
+    <div class="faq__list reveal" id="faqList">
+      <details>
+        <summary><span data-i18n="fq.q1">Kako dolgo traja ena terapija?</span><i></i></summary>
+        <div data-i18n-html="fq.a1"><p>Ena terapija traja približno 60 minut pri odraslih in 30 minut pri otrocih. Če posameznik potrebuje daljšo obravnavo, se terapija prilagodi.</p></div>
+      </details>
+      <details>
+        <summary><span data-i18n="fq.q2">Koliko terapij je potrebnih?</span><i></i></summary>
+        <div data-i18n-html="fq.a2"><p>Vsak človek je edinstven in tako ga je treba tudi obravnavati. Težave so lahko kratkoročne, kronične ali izhajajo iz določenega obdobja (tudi pred rojstvom). Po navadi zadoščajo največ 4 terapije — prve rezultate pokaže že začetna, na podlagi katere se dogovorimo o nadaljevanju.</p></div>
+      </details>
+      <details>
+        <summary><span data-i18n="fq.q3">Kako je s terapijami pri otrocih?</span><i></i></summary>
+        <div data-i18n-html="fq.a3"><p>Otroci se na terapije odzovejo zelo hitro in dobro, saj njihov miselni vzorec še ni tako omejen kot pri odraslih. Pri otrocih najpogosteje rešujem težave z alergijami, govorom, obnašanjem, hiperaktivnostjo in koncentracijo.</p></div>
+      </details>
+      <details>
+        <summary><span data-i18n="fq.q4">Kaj vse vpliva na naše zdravje?</span><i></i></summary>
+        <div data-i18n-html="fq.a4"><ul>
+          <li>negativni občutki in misli, ki jih gojimo,</li>
+          <li>vodni tokovi, zemeljska sevanja in elektrosmog,</li>
+          <li>težke kovine (amalgam, aluminij, fenol, živo srebro …),</li>
+          <li>pomanjkanje mineralov in vitaminov.</li>
+        </ul></div>
+      </details>
+      <details>
+        <summary><span data-i18n="fq.q5">Kje poteka terapija?</span><i></i></summary>
+        <div data-i18n-html="fq.a5"><p>Terapije potekajo v moji praksi na naslovu Pichla 51, 8355 Tieschen v Avstriji — tik ob slovenski meji. Testiranje spalnih prostorov opravim na vašem domu.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= BOOKING ======================= -->
+<section class="section section--dark booking" id="rezervacija">
+  <div class="wrap booking__split">
+    <div class="booking__text">
+      <p class="kicker kicker--gold reveal" data-i18n="bo.kicker">Rezervacija termina</p>
+      <h2 data-i18n-split="bo.h2">Harmonizirajte svoje telo</h2>
+      <p class="lead lead--dark reveal" data-i18n="bo.lead">Če bolezen razumemo in poznamo njene simptome ter začnemo zdraviti dušo in duha, lahko prispemo do sreče. Ne odlašajte.</p>
+      <div class="booking__contacts reveal">
+        <a class="contactCard" href="tel:+436641502443">
+          <i aria-hidden="true">☎</i><div><strong data-i18n="bo.callt">Pokličite me</strong><span>0043 664 150 2443</span></div>
+        </a>
+        <a class="contactCard" href="mailto:kollertanja@gmx.net">
+          <i aria-hidden="true">✉</i><div><strong data-i18n="bo.mailt">Pišite mi</strong><span>kollertanja@gmx.net</span></div>
+        </a>
+      </div>
+    </div>
+    <form class="booking__form reveal" id="bookingForm">
+      <div class="field"><label for="fName" data-i18n="bo.lname">Ime in priimek</label><input id="fName" name="name" type="text" required autocomplete="name"></div>
+      <div class="field field--half"><label for="fMail" data-i18n="bo.lmail">E-naslov</label><input id="fMail" name="email" type="email" required autocomplete="email"></div>
+      <div class="field field--half"><label for="fTel" data-i18n="bo.ltel">Telefonska številka</label><input id="fTel" name="tel" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="fTopic" data-i18n="bo.ltopic">Področje</label>
+        <select id="fTopic" name="topic">
+          <option value="" data-i18n="bo.o0">— izberite, če želite —</option>
+          <option data-i18n="bo.o1">Bolečine</option>
+          <option data-i18n="bo.o2">Alergije</option>
+          <option data-i18n="bo.o3">Psihološke težave</option>
+          <option data-i18n="bo.o4">Razstrupljanje</option>
+          <option data-i18n="bo.o5">Testiranje spalnih prostorov</option>
+          <option data-i18n="bo.o6">Harmoniziranje</option>
+          <option data-i18n="bo.o7">Drugo</option>
+        </select>
+      </div>
+      <div class="field"><label for="fMsg" data-i18n="bo.lmsg">Sporočilo</label><textarea id="fMsg" name="msg" rows="4" data-i18n-ph="bo.ph" placeholder="Na kratko opišite, kaj vas teži …"></textarea></div>
+      <button type="submit" class="btn btn--gold btn--full" data-i18n="bo.btn">Pošlji povpraševanje</button>
+      <p class="booking__hint" data-i18n="bo.hint">Ob kliku se odpre vaš e-poštni program s pripravljenim sporočilom. Rezervacija je možna tudi po telefonu.</p>
+    </form>
+  </div>
+</section>
+
+<!-- ======================= LOCATION ======================= -->
+<section class="location" id="lokacija">
+  <div class="location__media">
+    <img src="assets/img/house.jpg" alt="Praksa Tanje Koller — hiša s cvetličnim vrtom v Tieschnu" loading="lazy">
+  </div>
+  <div class="location__card reveal">
+    <p class="kicker" data-i18n="lo.kicker">Lokacija</p>
+    <h2 data-i18n-split="lo.h2">Najdete me v Tieschnu</h2>
+    <address data-i18n-html="lo.addr">
+      <strong>Tanja Koller</strong><br>
+      Pichla 51<br>
+      8355 Tieschen, Avstrija
+    </address>
+    <p class="location__note" data-i18n="lo.note">Mirna vasica na jugovzhodu avstrijske Štajerske, le nekaj minut od slovenske meje — lahko dostopna iz Slovenije, Gradca in Bad Radkersburga.</p>
+    <div class="location__actions">
+      <a class="btn btn--dark" href="https://www.google.com/maps/search/?api=1&query=Pichla+51%2C+8355+Tieschen%2C+%C3%96sterreich" target="_blank" rel="noopener" data-i18n="lo.gmaps">Google Zemljevidi</a>
+      <a class="btn btn--ghostDark" href="https://maps.apple.com/?q=Pichla+51,+8355+Tieschen,+Austria" target="_blank" rel="noopener" data-i18n="lo.amaps">Apple Karte</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= FINISHER ======================= -->
+<section class="finisher" aria-label="Povabilo k rezervaciji">
+  <div class="marquee marquee--dark" aria-hidden="true">
+    <div class="marquee__track marquee__track--rev">
+      <span data-i18n-html="marquee.b">Rezervirajte&ensp;·&ensp;Harmonizirajte&ensp;·&ensp;<em>Zaživite</em>&ensp;·&ensp;</span>
+      <span data-i18n-html="marquee.b">Rezervirajte&ensp;·&ensp;Harmonizirajte&ensp;·&ensp;<em>Zaživite</em>&ensp;·&ensp;</span>
+      <span data-i18n-html="marquee.b">Rezervirajte&ensp;·&ensp;Harmonizirajte&ensp;·&ensp;<em>Zaživite</em>&ensp;·&ensp;</span>
+    </div>
+  </div>
+  <div class="finisher__inner">
+    <h2 class="finisher__title" data-i18n-html="fi.title">Začnite svojo pot<br><em>do harmonije.</em></h2>
+    <a href="#rezervacija" class="btn btn--gold btn--big" data-i18n="fi.cta">Rezervirajte svoj termin</a>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div>
+      <p class="footer__brand">Tanja <em>Koller</em></p>
+      <p class="footer__tag" data-i18n-html="ft.tag">Harmonija za telo, dušo in duha.<br>Certificirana energetska zdravilka.</p>
+    </div>
+    <div>
+      <h4 data-i18n="ft.kontakt">Kontakt</h4>
+      <p><a href="tel:+436641502443">0043 664 150 2443</a><br>
+      <a href="mailto:kollertanja@gmx.net">kollertanja@gmx.net</a><br>
+      <span data-i18n="ft.addr">Pichla 51, 8355 Tieschen, Avstrija</span></p>
+    </div>
+    <div>
+      <h4 data-i18n="ft.links">Povezave</h4>
+      <p><a href="https://horstkrohne.de/" target="_blank" rel="noopener" data-i18n="ft.l1">Metoda Horsta Krohneja</a><br>
+      <a href="http://revijazarja.si/clanek/alter/5624da55ed46d/kar-danes-mislis-jutri-zivis" target="_blank" rel="noopener" data-i18n="ft.l2">Članek v Reviji Zarja</a></p>
+    </div>
+  </div>
+  <div class="wrap footer__legal">
+    <p data-i18n="ft.legal">Energetsko zdravljenje dopolnjuje, ne nadomešča zdravniške oskrbe. Ob zdravstvenih težavah se posvetujte tudi s svojim zdravnikom.</p>
+    <p>© <span id="year"></span> Tanja Koller · <span data-i18n="ft.rights">Vse pravice pridržane</span></p>
+  </div>
+</footer>
+
+<!-- ======================= LIGHTBOX ======================= -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox__close" id="lbClose" aria-label="Zapri">×</button>
+  <button class="lightbox__arrow lightbox__arrow--prev" id="lbPrev" aria-label="Prejšnja slika">←</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lightbox__arrow lightbox__arrow--next" id="lbNext" aria-label="Naslednja slika">→</button>
+  <p class="lightbox__caption" id="lbCaption"></p>
+</div>
+
+<!-- ======================= CURSOR ======================= -->
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+<div class="cursorDot" id="cursorDot" aria-hidden="true"></div>
+
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/three.min.js"></script>
+<script src="i18n.js"></script>
+<script src="hero3d.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
